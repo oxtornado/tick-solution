@@ -23,11 +23,6 @@ type Ticket = {
     fecha: string;
 };
 
-// Validación del campo estado
-function isEstado(val: any): val is Estado {
-    return ["sin ver", "en proceso", "resuelto"].includes(val);
-}
-
 export default function AdminDashboardPage() {
     const [tickets, setTickets] = useState<Ticket[]>([]);
 
